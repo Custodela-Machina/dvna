@@ -116,12 +116,7 @@ dvna.listen(port, function welcome () {
   console.log("dvna listening at: http://127.0.0.1:" + port + "/\n");
 });
 
-dvna.get('/', function (req, res) {
-  var data = {
-    vulnerabilities: vulnerabilities
-  };
-  res.render('dvna', data);
-});
+
 
 dvna.locals.md = md;
 
