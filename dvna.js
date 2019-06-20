@@ -9,6 +9,7 @@ var bodyparser = require('body-parser');
 
 // Express setup
 
+
 var dvna = express();
 var port = process.env.PORT || 3000;
 
@@ -37,6 +38,7 @@ filesystem.readdir(vulnerabilities_path, function (error, folders) {
   vulnerability.challenge = challenge;
   vulnerability.hint = hint;
   vulnerabilities.push(vulnerability);
+    
   });
   console.log('\nPress ctrl+c to shutdown the server');
 });
