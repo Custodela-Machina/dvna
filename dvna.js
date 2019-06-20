@@ -39,6 +39,146 @@ filesystem.readdir(vulnerabilities_path, function (error, folders) {
   });
   console.log('\nPress ctrl+c to shutdown the server');
 });
+// Setup the vulnerability file path
+var vulnerabilities = [], vulnerabilities_path = './vulnerabilities/';
+filesystem.readdir(vulnerabilities_path, function (error, folders) {
+  if (error) {
+    throw error;
+  }
+  dvna.set('vulnerabilities', vulnerabilities);
+  folders.map(function (folder) {
+    return path.join(vulnerabilities_path, folder);
+  }).filter(function (folder) {
+    return !filesystem.statSync(folder).isFile();
+  }).forEach(function (folder) {
+    console.log("[+] Loaded challenge '%s'...",  folder);
+  var vulnerability_id = path.basename(folder);
+  var vulnerability_path = path.join(folder, 'vulnerability.js');
+  var challenge_path = path.join(folder, 'challenge.md');
+  var hint_path = path.join(folder, 'hint.md');
+  var vulnerability = require('./' + vulnerability_path);
+  var challenge = filesystem.readFileSync(challenge_path, 'utf8');
+  var hint = filesystem.readFileSync(hint_path, 'utf8');
+  vulnerability.id = vulnerability_id;
+  vulnerability.path = vulnerability_id;
+  vulnerability.challenge = challenge;
+  vulnerability.hint = hint;
+  vulnerabilities.push(vulnerability);
+  });
+  console.log('\nPress ctrl+c to shutdown the server');
+});
+// Setup the vulnerability file path
+var vulnerabilities = [], vulnerabilities_path = './vulnerabilities/';
+filesystem.readdir(vulnerabilities_path, function (error, folders) {
+  if (error) {
+    throw error;
+  }
+  dvna.set('vulnerabilities', vulnerabilities);
+  folders.map(function (folder) {
+    return path.join(vulnerabilities_path, folder);
+  }).filter(function (folder) {
+    return !filesystem.statSync(folder).isFile();
+  }).forEach(function (folder) {
+    console.log("[+] Loaded challenge '%s'...",  folder);
+  var vulnerability_id = path.basename(folder);
+  var vulnerability_path = path.join(folder, 'vulnerability.js');
+  var challenge_path = path.join(folder, 'challenge.md');
+  var hint_path = path.join(folder, 'hint.md');
+  var vulnerability = require('./' + vulnerability_path);
+  var challenge = filesystem.readFileSync(challenge_path, 'utf8');
+  var hint = filesystem.readFileSync(hint_path, 'utf8');
+  vulnerability.id = vulnerability_id;
+  vulnerability.path = vulnerability_id;
+  vulnerability.challenge = challenge;
+  vulnerability.hint = hint;
+  vulnerabilities.push(vulnerability);
+  });
+  console.log('\nPress ctrl+c to shutdown the server');
+});
+// Setup the vulnerability file path
+var vulnerabilities = [], vulnerabilities_path = './vulnerabilities/';
+filesystem.readdir(vulnerabilities_path, function (error, folders) {
+  if (error) {
+    throw error;
+  }
+  dvna.set('vulnerabilities', vulnerabilities);
+  folders.map(function (folder) {
+    return path.join(vulnerabilities_path, folder);
+  }).filter(function (folder) {
+    return !filesystem.statSync(folder).isFile();
+  }).forEach(function (folder) {
+    console.log("[+] Loaded challenge '%s'...",  folder);
+  var vulnerability_id = path.basename(folder);
+  var vulnerability_path = path.join(folder, 'vulnerability.js');
+  var challenge_path = path.join(folder, 'challenge.md');
+  var hint_path = path.join(folder, 'hint.md');
+  var vulnerability = require('./' + vulnerability_path);
+  var challenge = filesystem.readFileSync(challenge_path, 'utf8');
+  var hint = filesystem.readFileSync(hint_path, 'utf8');
+  vulnerability.id = vulnerability_id;
+  vulnerability.path = vulnerability_id;
+  vulnerability.challenge = challenge;
+  vulnerability.hint = hint;
+  vulnerabilities.push(vulnerability);
+  });
+  console.log('\nPress ctrl+c to shutdown the server');
+});
+// Setup the vulnerability file path
+var vulnerabilities = [], vulnerabilities_path = './vulnerabilities/';
+filesystem.readdir(vulnerabilities_path, function (error, folders) {
+  if (error) {
+    throw error;
+  }
+  dvna.set('vulnerabilities', vulnerabilities);
+  folders.map(function (folder) {
+    return path.join(vulnerabilities_path, folder);
+  }).filter(function (folder) {
+    return !filesystem.statSync(folder).isFile();
+  }).forEach(function (folder) {
+    console.log("[+] Loaded challenge '%s'...",  folder);
+  var vulnerability_id = path.basename(folder);
+  var vulnerability_path = path.join(folder, 'vulnerability.js');
+  var challenge_path = path.join(folder, 'challenge.md');
+  var hint_path = path.join(folder, 'hint.md');
+  var vulnerability = require('./' + vulnerability_path);
+  var challenge = filesystem.readFileSync(challenge_path, 'utf8');
+  var hint = filesystem.readFileSync(hint_path, 'utf8');
+  vulnerability.id = vulnerability_id;
+  vulnerability.path = vulnerability_id;
+  vulnerability.challenge = challenge;
+  vulnerability.hint = hint;
+  vulnerabilities.push(vulnerability);
+  });
+  console.log('\nPress ctrl+c to shutdown the server');
+});
+// Setup the vulnerability file path
+var vulnerabilities = [], vulnerabilities_path = './vulnerabilities/';
+filesystem.readdir(vulnerabilities_path, function (error, folders) {
+  if (error) {
+    throw error;
+  }
+  dvna.set('vulnerabilities', vulnerabilities);
+  folders.map(function (folder) {
+    return path.join(vulnerabilities_path, folder);
+  }).filter(function (folder) {
+    return !filesystem.statSync(folder).isFile();
+  }).forEach(function (folder) {
+    console.log("[+] Loaded challenge '%s'...",  folder);
+  var vulnerability_id = path.basename(folder);
+  var vulnerability_path = path.join(folder, 'vulnerability.js');
+  var challenge_path = path.join(folder, 'challenge.md');
+  var hint_path = path.join(folder, 'hint.md');
+  var vulnerability = require('./' + vulnerability_path);
+  var challenge = filesystem.readFileSync(challenge_path, 'utf8');
+  var hint = filesystem.readFileSync(hint_path, 'utf8');
+  vulnerability.id = vulnerability_id;
+  vulnerability.path = vulnerability_id;
+  vulnerability.challenge = challenge;
+  vulnerability.hint = hint;
+  vulnerabilities.push(vulnerability);
+  });
+  console.log('\nPress ctrl+c to shutdown the server');
+});
 
 // Setup the templating engine
 dvna.set('view engine', 'jade');
