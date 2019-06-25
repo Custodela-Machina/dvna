@@ -39,6 +39,7 @@ filesystem.readdir(vulnerabilities_path, function (error, folders) {
   });
   
   
+  
   console.log('\nPress ctrl+c to shutdown the server');
 });
 
