@@ -58,6 +58,7 @@ dvna.get('/', function (req, res) {
   res.render('dvna', data);
 });
 
+
 dvna.locals.md = md;
 
 // Display the challenges
