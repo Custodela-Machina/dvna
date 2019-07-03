@@ -14,6 +14,7 @@ var bodyparser = require('body-parser');
 var dvna = express();
 var port = process.env.PORT || 3000;
 
+
 // Setup the vulnerability file path
 var vulnerabilities = [], vulnerabilities_path = './vulnerabilities/';
 filesystem.readdir(vulnerabilities_path, function (error, folders) {
